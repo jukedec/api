@@ -60,7 +60,13 @@ func App() *buffalo.App {
 		app.Use(translations())
 
 		app.GET("/", HomeHandler)
+		app.GET("/artist/{name}")
+		app.GET("/song/{name}")
+		app.GET("/album/{name}")
+		app.GET("/band/{name}")
 
+
+		
 		app.ServeFiles("/", assetsBox) // serve files from the public directory
 	}
 
