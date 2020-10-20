@@ -60,13 +60,16 @@ func App() *buffalo.App {
 		app.Use(translations())
 
 		app.GET("/", HomeHandler)
-		app.GET("/artist/{name}")
-		app.GET("/song/{name}")
-		app.GET("/album/{name}")
-		app.GET("/band/{name}")
 
+		apiGroup := app.Group("/api")
 
-		
+		apiV1Group := apiGroup.Group("/v1")
+
+		apiV1Group.GET("/artist", apiV1ArtistHandler)
+		apiV1Group.GET("/song", apiV1SongHandler)
+		apiV1Group.GET("/album", apiV1AlbumHandler)
+		apiV1Group.GET("/band", apiV1BandHandler)
+
 		app.ServeFiles("/", assetsBox) // serve files from the public directory
 	}
 
