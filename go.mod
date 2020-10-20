@@ -16,6 +16,7 @@ require (
 	github.com/gobuffalo/suite v2.8.2+incompatible
 	github.com/gobuffalo/uuid v2.0.5+incompatible
 	github.com/gobuffalo/validate/v3 v3.1.0
+	github.com/gobuffalo/x v0.0.0-20190224155809-6bb134105960
 	github.com/gofrs/uuid v3.2.0+incompatible
 	github.com/unrolled/secure v0.0.0-20190103195806-76e6d4e9b90c
 )

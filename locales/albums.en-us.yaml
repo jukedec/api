@@ -1,0 +1,6 @@
+- id: "album.created.success"
+  translation: "Album was successfully created."
+- id: "album.updated.success"
+  translation: "Album was successfully updated."
+- id: "album.destroyed.success"
+  translation: "Album was successfully destroyed."

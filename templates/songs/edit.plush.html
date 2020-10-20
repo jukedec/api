@@ -1,0 +1,8 @@
+<div class="py-4 mb-2">
+  <h3 class="d-inline-block">Edit Song</h3>
+</div>
+
+<%= formFor(song, {action: songPath({ song_id: song.ID }), method: "PUT"}) { %>
+  <%= partial("songs/form.html") %>
+  <%= linkTo(songPath({ song_id: song.ID }), {class: "btn btn-warning", "data-confirm": "Are you sure?", body: "Cancel"}) %>
+<% } %>

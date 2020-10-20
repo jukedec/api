@@ -1,0 +1,17 @@
+<div class="py-4 mb-2">
+  <h3 class="d-inline-block">Song Details</h3>
+
+  <div class="float-right">
+    <%= linkTo(songsPath(), {class: "btn btn-info"}) { %>
+      Back to all Songs
+    <% } %>
+    <%= linkTo(editSongPath({ song_id: song.ID }), {class: "btn btn-warning", body: "Edit"}) %>
+    <%= linkTo(songPath({ song_id: song.ID }), {class: "btn btn-danger", "data-method": "DELETE", "data-confirm": "Are you sure?", body: "Destroy"}) %>
+  </div>
+</div>
+
+
+
+<ul class="list-group mb-2 ">
+
+</ul>

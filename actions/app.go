@@ -70,6 +70,10 @@ func App() *buffalo.App {
 		apiV1Group.GET("/album", apiV1AlbumHandler)
 		apiV1Group.GET("/band", apiV1BandHandler)
 
+		app.Resource("/artists", ArtistsResource{})
+		app.Resource("/albums", AlbumsResource{})
+		app.Resource("/songs", SongsResource{})
+		app.Resource("/bands", BandsResource{})
 		app.ServeFiles("/", assetsBox) // serve files from the public directory
 	}
 

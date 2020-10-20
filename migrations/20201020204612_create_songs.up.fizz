@@ -1,0 +1,4 @@
+create_table("songs") {
+	t.Column("id", "uuid", {primary: true})
+	t.Timestamps()
+}
