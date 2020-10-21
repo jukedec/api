@@ -66,7 +66,6 @@ func App() *buffalo.App {
 		app.Resource("/songs", SongsResource{})
 		app.Resource("/bands", BandsResource{})
 		app.Resource("/artists", ArtistsResource{})
-		app.Resource("/artists", ArtistsResource{})
 		app.Resource("/bands", BandsResource{})
 		app.Resource("/songs", SongsResource{})
 		app.Resource("/albums", AlbumsResource{})
