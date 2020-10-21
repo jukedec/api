@@ -1,0 +1,4 @@
+drop_foreign_key("band_members", "band_member_artist_fk", {"if_exists": true})
+drop_foreign_key("band_members", "band_member_band_fk", {"if_exists": true})
+drop_column("band_members", "artist_id")
+drop_column("band_members", "band_id")

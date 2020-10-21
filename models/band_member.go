@@ -9,45 +9,44 @@ import (
 	"github.com/gofrs/uuid"
 )
 
-// Band is used by pop to map your bands database table to your go code.
-type Band struct {
-	ID          uuid.UUID `json:"id" db:"id"`
-	CreatedAt   time.Time `json:"created_at" db:"created_at"`
-	UpdatedAt   time.Time `json:"updated_at" db:"updated_at"`
-	Name        string    `json:"name" db:"name"`
-	Description string    `json:"description" db:"description"`
-	ImgUrl      string    `json:"img_url" db:"img_url"`
+// BandMember is used by pop to map your band_members database table to your go code.
+type BandMember struct {
+	ID        uuid.UUID `json:"id" db:"id"`
+	CreatedAt time.Time `json:"created_at" db:"created_at"`
+	UpdatedAt time.Time `json:"updated_at" db:"updated_at"`
+	ArtistID  uuid.UUID `json:"artist_id" db:"artist_id"`
+	BandID    uuid.UUID `json:"band_id" db:"band_id"`
 }
 
 // String is not required by pop and may be deleted
-func (b Band) String() string {
+func (b BandMember) String() string {
 	jb, _ := json.Marshal(b)
 	return string(jb)
 }
 
-// Bands is not required by pop and may be deleted
-type Bands []Band
+// BandMembers is not required by pop and may be deleted
+type BandMembers []BandMember
 
 // String is not required by pop and may be deleted
-func (b Bands) String() string {
+func (b BandMembers) String() string {
 	jb, _ := json.Marshal(b)
 	return string(jb)
 }
 
 // Validate gets run every time you call a "pop.Validate*" (pop.ValidateAndSave, pop.ValidateAndCreate, pop.ValidateAndUpdate) method.
 // This method is not required and may be deleted.
-func (b *Band) Validate(tx *pop.Connection) (*validate.Errors, error) {
+func (b *BandMember) Validate(tx *pop.Connection) (*validate.Errors, error) {
 	return validate.NewErrors(), nil
 }
 
 // ValidateCreate gets run every time you call "pop.ValidateAndCreate" method.
 // This method is not required and may be deleted.
-func (b *Band) ValidateCreate(tx *pop.Connection) (*validate.Errors, error) {
+func (b *BandMember) ValidateCreate(tx *pop.Connection) (*validate.Errors, error) {
 	return validate.NewErrors(), nil
 }
 
 // ValidateUpdate gets run every time you call "pop.ValidateAndUpdate" method.
 // This method is not required and may be deleted.
-func (b *Band) ValidateUpdate(tx *pop.Connection) (*validate.Errors, error) {
+func (b *BandMember) ValidateUpdate(tx *pop.Connection) (*validate.Errors, error) {
 	return validate.NewErrors(), nil
 }

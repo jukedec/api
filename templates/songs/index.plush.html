@@ -17,6 +17,20 @@
       <tr>
         
         <td>
+          <div class="float-left">
+            <!-- <image href=<%= song.ImgUrl %>></image> -->
+            <image style="height:10ex;width:10ex;" src="http://localhost:3000/assets/images/no-image-icon.png"></image>
+            <br>
+            <span style="font-weight:bold; font-size:x-large"><%= song.Name %></span>
+            <br>
+            <span>$<%= song.Price %></span>
+            <hr>
+            <span>Artist: <%= song.ArtistID %></span><br>
+            <span>Album: <%= song.ArtistID %></span>
+            <hr>
+            <%= song.Description %>
+            <hr>
+          </div>
           <div class="float-right">
             <%= linkTo(songPath({ song_id: song.ID }), {class: "btn btn-info", body: "View"}) %>
             <%= linkTo(editSongPath({ song_id: song.ID }), {class: "btn btn-warning", body: "Edit"}) %>

@@ -1,0 +1,5 @@
+drop_foreign_key("albums", "album_artist_fk", {"if_exists": true})
+drop_column("albums", "artist_id")
+drop_column("albums", "name")
+drop_column("albums", "description")
+drop_column("albums", "img_url")

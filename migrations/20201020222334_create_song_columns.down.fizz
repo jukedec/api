@@ -1,0 +1,10 @@
+drop_foreign_key("songs", "song_artist_fk", {"if_exists": true})
+drop_foreign_key("songs", "song_album_fk", {"if_exists": true})
+drop_column("songs", "artist_id")
+drop_column("songs", "album_id")
+drop_column("songs", "name")
+drop_column("songs", "description")
+drop_column("songs", "img_url")
+drop_column("songs", "song_url")
+drop_column("songs", "price")
+

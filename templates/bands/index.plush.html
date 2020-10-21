@@ -17,6 +17,17 @@
       <tr>
         
         <td>
+          <div class="float-left">
+            <!-- <image href=<%= band.ImgUrl %>></image> -->
+            <image style="height:10ex;width:10ex;" src="http://localhost:3000/assets/images/no-image-icon.png"></image>
+            <br>
+            <span style="font-weight:bold; font-size:x-large"><%= band.Name %></span>
+            <br>
+            <span><%= band.ID %></span>
+            <hr>
+            <%= band.Description %>
+            <hr>
+          </div>
           <div class="float-right">
             <%= linkTo(bandPath({ band_id: band.ID }), {class: "btn btn-info", body: "View"}) %>
             <%= linkTo(editBandPath({ band_id: band.ID }), {class: "btn btn-warning", body: "Edit"}) %>

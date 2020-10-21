@@ -17,6 +17,17 @@
       <tr>
         
         <td>
+          <div class="float-left">
+            <!-- <image href=<%= artist.ImgUrl %>></image> -->
+            <image style="height:10ex;width:10ex;" src="http://localhost:3000/assets/images/no-image-icon.png"></image>
+            <br>
+            <span style="font-weight:bold; font-size:x-large"><%= artist.Name %></span>
+            <br>
+            <span><%= artist.ID %></span>
+            <hr>
+            <%= artist.Description %>
+            <hr>
+          </div>
           <div class="float-right">
             <%= linkTo(artistPath({ artist_id: artist.ID }), {class: "btn btn-info", body: "View"}) %>
             <%= linkTo(editArtistPath({ artist_id: artist.ID }), {class: "btn btn-warning", body: "Edit"}) %>

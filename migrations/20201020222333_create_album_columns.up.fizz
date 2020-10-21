@@ -1,0 +1,9 @@
+add_column("albums", "artist_id", "uuid", {})
+add_foreign_key("albums", "artist_id", {"artists": ["id"]}, {
+    "name": "album_artist_fk",
+    "on_delete": "CASCADE",
+    "on_update": "CASCADE"
+})
+add_column("albums", "name", "string", {})
+add_column("albums", "description", "string", {})
+add_column("albums", "img_url", "string", {})

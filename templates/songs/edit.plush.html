@@ -4,5 +4,12 @@
 
 <%= formFor(song, {action: songPath({ song_id: song.ID }), method: "PUT"}) { %>
   <%= partial("songs/form.html") %>
+  <%= f.InputTag("Name") %>
+  <%= f.InputTag("Description") %>
+  <%= f.InputTag("ImgUrl") %>
+  <%= f.InputTag("SongUrl") %>
+  <%= f.InputTag("Price") %>
+  <%= f.InputTag("ArtistID") %>
+  <%= f.InputTag("AlbumID") %>
   <%= linkTo(songPath({ song_id: song.ID }), {class: "btn btn-warning", "data-confirm": "Are you sure?", body: "Cancel"}) %>
 <% } %>

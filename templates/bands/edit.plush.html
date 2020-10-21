@@ -4,5 +4,8 @@
 
 <%= formFor(band, {action: bandPath({ band_id: band.ID }), method: "PUT"}) { %>
   <%= partial("bands/form.html") %>
+  <%= f.InputTag("Name") %>
+  <%= f.InputTag("Description") %>
+  <%= f.InputTag("ImgUrl") %>
   <%= linkTo(bandPath({ band_id: band.ID }), {class: "btn btn-warning", "data-confirm": "Are you sure?", body: "Cancel"}) %>
 <% } %>

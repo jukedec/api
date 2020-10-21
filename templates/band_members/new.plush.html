@@ -1,0 +1,10 @@
+<div class="py-4 mb-2">
+  <h3 class="d-inline-block">New BandMember</h3>
+</div>
+
+<%= formFor(bandMember, {action: bandMembersPath(), method: "POST"}) { %>
+  <%= partial("band_members/form.html") %>
+  <%= f.InputTag("ArtistID") %>
+  <%= f.InputTag("BandID") %>
+  <%= linkTo(bandMembersPath(), {class: "btn btn-warning", "data-confirm": "Are you sure?", body: "Cancel"}) %>
+<% } %>

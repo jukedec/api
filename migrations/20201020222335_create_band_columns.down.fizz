@@ -1,0 +1,3 @@
+drop_column("bands", "name")
+drop_column("bands", "description")
+drop_column("bands", "img_url")

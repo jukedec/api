@@ -5,12 +5,21 @@
     <%= linkTo(artistsPath(), {class: "btn btn-info"}) { %>
       Back to all Artists
     <% } %>
+
     <%= linkTo(editArtistPath({ artist_id: artist.ID }), {class: "btn btn-warning", body: "Edit"}) %>
     <%= linkTo(artistPath({ artist_id: artist.ID }), {class: "btn btn-danger", "data-method": "DELETE", "data-confirm": "Are you sure?", body: "Destroy"}) %>
   </div>
 </div>
 
-
+<div>
+  <b><%= artist.Name %></b>
+  <br>
+  <br>
+  <%= artist.Description %>
+  <br>
+  <br>
+  <%= artist.ImgUrl %>
+</div>
 
 <ul class="list-group mb-2 ">
 

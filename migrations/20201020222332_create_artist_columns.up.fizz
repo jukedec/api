@@ -1,0 +1,3 @@
+add_column("artists", "name", "string", {})
+add_column("artists", "description", "string", {})
+add_column("artists", "img_url", "string", {})

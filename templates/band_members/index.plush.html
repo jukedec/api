@@ -1,0 +1,39 @@
+<div class="py-4 mb-2">
+  <h3 class="d-inline-block">BandMembers</h3>
+  <div class="float-right">
+    <%= linkTo(newBandMembersPath(), {class: "btn btn-primary"}) { %>
+      Create New BandMember
+    <% } %>
+  </div>
+</div>
+
+<table class="table table-hover table-bordered">
+  <thead class="thead-light">
+    
+    <th>&nbsp;</th>
+  </thead>
+  <tbody>
+    <%= for (bandMember) in bandMembers { %>
+      <tr>
+        
+        <td>
+          <div class="float-left">
+            <span>Band: <%= bandMember.BandID %></span>
+            <br>
+            <span>Artist: <%= bandMember.ArtistID %></span>
+
+          </div>
+          <div class="float-right">
+            <%= linkTo(bandMemberPath({ band_member_id: bandMember.ID }), {class: "btn btn-info", body: "View"}) %>
+            <%= linkTo(editBandMemberPath({ band_member_id: bandMember.ID }), {class: "btn btn-warning", body: "Edit"}) %>
+            <%= linkTo(bandMemberPath({ band_member_id: bandMember.ID }), {class: "btn btn-danger", "data-method": "DELETE", "data-confirm": "Are you sure?", body: "Destroy"}) %>
+          </div>
+        </td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>
+
+<div class="text-center">
+  <%= paginator(pagination) %>
+</div>
