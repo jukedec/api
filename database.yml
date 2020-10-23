@@ -1,9 +1,9 @@
 ---
 development:
   dialect: postgres
-  database: jukedec_api_development
+  database: content_server_development
   user: postgres
-  password: zXvw93dbcUGCg9n3Qb11BiOIB1RxVTXN1iVg5KX5NIECsIKBLXYZYiSoTEolhpaS
+  password: grinddog
   host: 127.0.0.1
   pool: 5
 

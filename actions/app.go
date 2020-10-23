@@ -12,7 +12,7 @@ import (
 	"github.com/gobuffalo/buffalo-pop/v2/pop/popmw"
 	csrf "github.com/gobuffalo/mw-csrf"
 	i18n "github.com/gobuffalo/mw-i18n"
-	"github.com/gobuffalo/packr/v2"
+// 	"github.com/gobuffalo/packr/v2"
 )
 
 // ENV is used to help switch settings based on where the
@@ -78,9 +78,9 @@ func App() *buffalo.App {
 // for more information: https://gobuffalo.io/en/docs/localization
 func translations() buffalo.MiddlewareFunc {
 	var err error
-	if T, err = i18n.New(packr.New("app:locales", "../locales"), "en-US"); err != nil {
-		app.Stop(err)
-	}
+// 	if T, err = i18n.New(packr.New("app:locales", "../locales"), "en-US"); err != nil {
+// 		app.Stop(err)
+// 	}
 	return T.Middleware()
 }
 
